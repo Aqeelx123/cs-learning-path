@@ -1,57 +1,74 @@
-.title_logo
-{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Ensure Full Page Without Scrolling */
+html, body {
+  height: 100vh;
+  overflow: hidden; /* Prevents unnecessary scrolling */
+}
+
+/* Top Navigation Bar */
+.text_top {
+  display: flex;
+  align-items: center;
+  background-color: #1995AD; /* Updated navigation bar color */
+  padding: 15px 20px;
+}
+
+.title_logo {
   border-radius: 100%;
   height: 40px;
 }
-.text_top
-{
-  display: grid;
-  grid-template-columns: 40px 100px;
 
-}
-.studyhub
-{
+.studyhub {
   font-family: Kanit;
   font-weight: 700;
-  display: inline-block;
-  margin: 0px;
-  padding-top: 5px;
-  color:rgb(11, 87, 150);
+  color: white; /* White text for contrast */
+  margin-left: 10px;
 }
 
-.bottom
-{
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 90px;
-  background-color: rgb(240, 240, 240);
-}
-.bottom-content
-{
+/* Centered Login Section */
+.centre-space {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: calc(100vh - 90px); /* Adjust height to account for the bottom bar */
+  background-color: #f1f3f5;
+  padding: 20px;
+  position: relative;
 }
-.bottom-text
-{
-  display: inline-block;
-  margin-top: 30px;
-  margin-left: 15px;
+
+/* Filling Right and Left Edges */
+.centre-space::before,
+.centre-space::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3%;
+  background-color: #A1D6E2;
 }
-.bottom-text:hover
-{
-  cursor: pointer;
+
+.centre-space::before {
+  left: 0;
 }
+
+.centre-space::after {
+  right: 0;
+}
+
 /* Login Card */
 .login-card {
-  margin-top: -70px;
-  background-color: #fff;
+  background-color: #A1D6E2;
   width: 350px;
   padding: 20px 30px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Ensures it's above the background edges */
 }
 
 .login-card h2 {
@@ -95,7 +112,7 @@
 }
 
 .options a {
-  color: #007BFF;
+  color: #1995AD;
   text-decoration: none;
 }
 
@@ -108,23 +125,68 @@ button {
   padding: 10px;
   font-size: 16px;
   color: #fff;
-  background-color: #007BFF;
+  background-color: #1995AD;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #116474;
 }
-.centre-space
-{
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+
+/* Bottom Section */
+.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background-color: #A1D6E2;
+}
+
+.bottom-content {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
+
+.bottom-text {
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 15px;
+  color: #1995AD;
+}
+
+.bottom-text:hover {
+  cursor: pointer;
+}
+
+/* Sign-Up Option */
+.signup-option {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.signup-option p {
+  font-size: 14px;
+  color: #555;
+  display: inline-block;
+  margin-right: 28px;
+}
+
+.signup-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1995AD;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.signup-button:hover {
+  background-color: #116474;
+}
+
