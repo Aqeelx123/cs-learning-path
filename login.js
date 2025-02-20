@@ -20,5 +20,10 @@ form.addEventListener("submit", function(event) {
     errorMessage.innerText("Please enter a valid email address");
   }
 
+  if(!email.includes("."))
+  {
+    errorMessage.innerText("Please enter a valid email address");
+  }
+
   form.submit();
 });
