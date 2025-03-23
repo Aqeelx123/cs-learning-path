@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  margin: 0 15px;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: rgb(73, 182, 250);
+}
+
+.navbar .icons {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .icons i {
+  font-size: 20px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.module-buttons-container {
+  width: 70%;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-right: 15px;
+}
+
+.categories {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 5px;
+}
+
+.categories button {
+  padding: 8px 15px;
+  border: none;
+  background-color: lightgray;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  white-space: nowrap;
+}
+
+.categories button:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.categories .active {
+  background-color: rgb(73, 182, 250);
+  color: white;
+}
+
+.search-container-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+.search-container input {
+  padding: 8px 15px;
+  width: 250px;
+  border-radius: 20px;
+  border: 1px solid rgb(73, 182, 250);
+  box-shadow: inset 0 2px 5px rgba(73, 182, 250, 0.2);
+  outline: none;
+  transition: box-shadow 0.3s;
+}
+
+.search-container input:focus {
+  box-shadow: inset 0 2px 5px rgba(73, 182, 250, 0.5);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 30px 40px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin: 15px 15px 10px;
+  line-height: 1.3;
+}
+
+.card p {
+  color: #666;
+  font-size: 14px;
+  margin: 0 15px 15px;
+  flex-grow: 1;
+}
+
+.card .video-link {
+  display: block;
+  background-color: rgb(73, 182, 250);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  margin-top: auto;
+  transition: background-color 0.3s;
+}
+
+.card .video-link:hover {
+  background-color: rgb(53, 162, 230);
+  cursor: pointer;
+}
+
+.subject-title {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  margin-top: 30px;
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Scrollbar styling */
+.module-buttons-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.module-buttons-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.module-buttons-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.module-buttons-container::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .search-container-wrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .module-buttons-container {
+    width: 100%;
+  }
+  
+  .search-container {
+    width: 100%;
+  }
+  
+  .search-container input {
+    width: 100%;
+  }
+  
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .navbar {
+    padding: 15px 20px;
+  }
+}

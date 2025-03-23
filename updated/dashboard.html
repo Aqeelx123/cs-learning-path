@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - StudyHub</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <script src="dashboard.js" defer></script>
+
+    <!-- Navbar -->
+    <header>
+        <input type="text" placeholder="Search educational videos, quizzes, flashcards">
+        <nav>
+            <a href="#">Categories</a>
+            <a href="#">Brands</a>
+            <a href="#">Progress</a>
+            <a href="#">Login</a>
+            <select id="semesterSelect">
+                <option value="1">Semester 1</option>
+                <option value="2">Semester 2</option>
+                <option value="3">Semester 3</option>
+                <option value="4">Semester 4</option>
+                <option value="5">Semester 5</option>
+                <option value="6">Semester 6</option>
+                <option value="7">Semester 7</option>
+                <option value="8">Semester 8</option>
+            </select>
+            <img src="/logos/db.jpg" alt="User Profile" class="profile-icon">
+        </nav>
+    </header>
+
+    <!-- Recommended Section -->
+    <section class="recommended">
+        <h2>Recommended for students</h2>
+    </section>
+
+    <!-- Subject Container -->
+    <div class="main-content">
+        <section class="video-grid" id="subjects-container">
+            <!-- Subjects will be dynamically added here -->
+        </section>
+    </div>
+
+    <!-- Load More Button -->
+    <button class="load-more">Load more</button>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <div>
+                <h4>Profile</h4>
+                <a href="#">Settings</a>
+                <a href="#">Logout Help</a>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <a href="#">Privacy Terms</a>
+                <a href="#">Cookies</a>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <a href="#">Shipping Returns</a>
+                <a href="#">Security</a>
+            </div>
+            <div class="social">
+                <h4>Connect</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+        <p>Copyright © StudyHub 2025</p>
+    </footer>
+</body>
+</html>
