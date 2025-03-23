@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+.navbar .icons {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .icons i {
+  font-size: 20px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.categories {
+  display: flex;
+  gap: 15px;
+}
+
+.categories button {
+  padding: 8px 15px;
+  border: none;
+  background-color: lightgray;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.categories .active {
+  background-color: rgb(73, 182, 250);
+  color: white;
+}
+
+.search-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-container input {
+  padding: 8px;
+  width: 250px;
+  border-radius: 20px;
+  border: 1px solid gray;
+  box-shadow: inset 0 2px 5px rgba(73, 182, 250, 0.2);
+  border-color: rgb(73, 182, 250);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  margin-left: 24px;
+  margin-right: 12px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.grid-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.grid-container::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+.grid-container::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 10px;
+}
+
+.card {
+  background: white;
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+
+}
+
+.card p {
+  color: gray;
+  font-size: 14px;
+}
+
+.card .price {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.footer {
+  margin-top: 30px;
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.subject-title{
+  width: 100px;
+  border-radius: 100px;
+}
+
+.search-container-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+.video-link:hover{
+  cursor: pointer;
+}
